@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "329283842385",
+    "project_id": "ebazaar-b1afc",
+    "storage_bucket": "ebazaar-b1afc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329283842385:android:a8c8351c7ddef1f1c5e370",
+        "android_client_info": {
+          "package_name": "com.example.ebazaar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQir46hhy1mTULt3YSaaV8o7kJZkNs5UE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
