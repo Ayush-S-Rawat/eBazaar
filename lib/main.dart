@@ -14,7 +14,6 @@ void main() async {
     projectId: 'ebazaar-b1afc',
     storageBucket: 'gs://ebazaar-b1afc.appspot.com',
   ));
-  // await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
