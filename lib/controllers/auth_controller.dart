@@ -39,7 +39,7 @@ class AuthController extends GetxController {
       'name': name,
       'password': password,
       'email': email,
-      'imageUrl': '',
+      'imageURL': '',
       'id': currentUser!.uid,
       'cart_count': "00",
       'order_count': "00",

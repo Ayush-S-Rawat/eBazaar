@@ -40,7 +40,6 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ).onTap(() {
                       controller.nameController.text = data['name'];
-                      controller.passController.text = data['password'];
                       Get.to(() => EditProfileScreen(data: data));
                     }),
                   ),
@@ -91,15 +90,15 @@ class ProfileScreen extends StatelessWidget {
                     children: [
                       detailsCard(
                           count: data['cart_count'],
-                          title: "in your card",
+                          title: "In your Cart",
                           width: context.screenWidth / 3.4),
                       detailsCard(
                           count: data['wishlist_count'],
-                          title: "in your wishlist",
+                          title: "In your Wishlist",
                           width: context.screenWidth / 3.4),
                       detailsCard(
                           count: data['order_count'],
-                          title: "your Orders",
+                          title: "Your Orders",
                           width: context.screenWidth / 3.4),
                     ],
                   ),
