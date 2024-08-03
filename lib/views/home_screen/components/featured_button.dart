@@ -1,4 +1,5 @@
 import 'package:ebazaar/consts/consts.dart';
+import 'package:ebazaar/views/category_screen/category_details.dart';
 
 Widget featuredButton({String? title, icon}) {
   return Row(
@@ -19,5 +20,8 @@ Widget featuredButton({String? title, icon}) {
       .roundedSM
       .outerShadowSm
       .white
-      .make();
+      .make()
+      .onTap(() {
+    Get.to(() => CategoryDetails(title: title));
+  });
 }

@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ebazaar/consts/consts.dart';
+import 'package:ebazaar/views/cart_screen/shipping_screen.dart';
 
 import '../../controllers/cart_controller.dart';
 import '../../services/firestore_services.dart';
@@ -13,6 +14,16 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var controller = Get.put(CartController());
     return Scaffold(
+        bottomNavigationBar: SizedBox(
+          height: 60,
+          child: ourButton(
+              color: redColor,
+              onPress: () {
+                Get.to(() => ShippingDetails());
+              },
+              textColor: whiteColor,
+              title: 'Proceed to shipping'),
+        ),
         backgroundColor: Colors.white,
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -37,6 +48,8 @@ class CartScreen extends StatelessWidget {
               } else {
                 var data = snapshot.data!.docs;
                 controller.calculate(data);
+                controller.productSnapshot = data;
+
                 return Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Column(
@@ -46,18 +59,18 @@ class CartScreen extends StatelessWidget {
                             itemCount: data.length,
                             itemBuilder: (BuildContext context, int index) {
                               return ListTile(
-                                leading: Image.network('${data[index]['img']}')
-                                    .box
-                                    .roundedSM
-                                    .clip(Clip.antiAlias)
-                                    .make(),
+                                leading: Image.network(
+                                  '${data[index]['img']}',
+                                  width: 100,
+                                  fit: BoxFit.cover,
+                                ).box.roundedSM.clip(Clip.antiAlias).make(),
                                 title:
                                     '${data[index]['title']} (x${data[index]['qty']})'
                                         .text
                                         .fontFamily(semibold)
                                         .size(16)
                                         .make(),
-                                subtitle: '${data[index]['tPrice']}'
+                                subtitle: '${data[index]['tprice']}'
                                     .numCurrency
                                     .text
                                     .color(redColor)
@@ -98,14 +111,6 @@ class CartScreen extends StatelessWidget {
                           .roundedSM
                           .make(),
                       10.heightBox,
-                      SizedBox(
-                        width: context.screenWidth - 60,
-                        child: ourButton(
-                            color: redColor,
-                            onPress: () {},
-                            textColor: whiteColor,
-                            title: 'Proceed to shipping'),
-                      )
                     ],
                   ),
                 );

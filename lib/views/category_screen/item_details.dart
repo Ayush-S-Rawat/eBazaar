@@ -9,11 +9,12 @@ import 'package:flutter/material.dart';
 class ItemDetails extends StatelessWidget {
   final String? title;
   final dynamic data;
-  const ItemDetails({super.key, required this.title, required this.data});
+  const ItemDetails({required this.title, required this.data, super.key});
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.find<ProductController>();
+    // var controller = Get.find<ProductController>();
+    var controller = Get.put(ProductController());
     return WillPopScope(
       onWillPop: () async {
         controller.resetValues();
@@ -318,16 +319,21 @@ class ItemDetails extends StatelessWidget {
               child: ourButton(
                   color: redColor,
                   onPress: () {
-                    controller.addToCart(
-                        color: data['p_colors'][controller.colorIndex.value]
-                            .toString(),
-                        context: context,
-                        img: data['p_imgs'][0],
-                        qty: controller.quantity.value,
-                        sellername: data['p_seller'],
-                        title: data['p_name'],
-                        tprice: controller.totalPrice.value);
-                    VxToast.show(context, msg: 'Added to cart');
+                    if (controller.quantity.value > 0) {
+                      controller.addToCart(
+                          color: data['p_colors'][controller.colorIndex.value]
+                              .toString(),
+                          context: context,
+                          img: data['p_imgs'][0],
+                          vendorID: data['vendor_id'],
+                          qty: controller.quantity.value,
+                          sellername: data['p_seller'],
+                          title: data['p_name'],
+                          tprice: controller.totalPrice.value);
+                      VxToast.show(context, msg: 'Added to cart');
+                    } else {
+                      VxToast.show(context, msg: "Quantity cannot be 0");
+                    }
                   },
                   textColor: whiteColor,
                   title: "Add to Cart"),

@@ -38,7 +38,8 @@ const icProfile = "assets/icons/profile.png";
 const icRefund = "assets/icons/refund.png";
 const icSearch = "assets/icons/search.png";
 const icShop = "assets/icons/shop.png";
-const icSplashBg = "assets/icons/splash_login_registration_background_image.png";
+const icSplashBg =
+    "assets/icons/splash_login_registration_background_image.png";
 const icSquareLogo = "assets/icons/square_logo.png";
 const icTodaysDeal = "assets/icons/todays_deal.png";
 const icTopCategories = "assets/icons/top_categories.png";
@@ -73,6 +74,7 @@ const imgFc7 = "assets/images/fc7.jpeg";
 const imgFc8 = "assets/images/fc8.jpeg";
 const imgFc9 = "assets/images/fc9.jpeg";
 const imgFc10 = "assets/images/fc10.jpg";
+const imgFc11 = "assets/images/fc11.jpeg";
 const imgFd1 = "assets/images/fd1.jpg";
 const imgFd2 = "assets/images/fd2.jpg";
 const imgFd3 = "assets/images/fd3.jpg";

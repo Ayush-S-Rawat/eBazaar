@@ -23,7 +23,8 @@ const alreadyHaveAccount = "Already have an Account? ";
 const home = "Home",
     categories = "Categories",
     cart = "Cart",
-    account = "Account";
+    account = "Account",
+    allproducts = "All Products";
 
 const searchanything = "Search Anything...",
     todaydeal = "Today's deal",
@@ -62,3 +63,8 @@ const wishlist = "My wishlist",
     messages = "Messages",
     oldpasss = "Old Password",
     newpass = "New password";
+
+const paypal = "Paypal",
+    stripe = "Stripe",
+    cod = "Cash On Delivery",
+    paytm = "Paytm";
