@@ -2,7 +2,6 @@ import 'package:ebazaar/consts/lists.dart';
 import 'package:ebazaar/controllers/product_controller.dart';
 import 'package:ebazaar/views/category_screen/category_details.dart';
 import 'package:ebazaar/widgets_common/bg_widgets.dart';
-import 'package:flutter/material.dart';
 import 'package:ebazaar/consts/consts.dart';
 
 class CategoryScreen extends StatelessWidget {

@@ -5,7 +5,6 @@ import 'package:ebazaar/controllers/profile_controller.dart';
 import 'package:ebazaar/widgets_common/bg_widgets.dart';
 import 'package:ebazaar/widgets_common/custom_textfields.dart';
 import 'package:ebazaar/widgets_common/our_button.dart';
-import 'package:flutter/material.dart';
 
 class EditProfileScreen extends StatelessWidget {
   final dynamic data;

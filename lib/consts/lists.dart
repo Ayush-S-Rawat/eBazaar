@@ -1,5 +1,4 @@
 import 'package:ebazaar/consts/consts.dart';
-import 'package:ebazaar/consts/images.dart';
 
 const socialIconList = [icFacebookLogo, icGoogleLogo, icTwitterLogo];
 

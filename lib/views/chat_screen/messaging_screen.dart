@@ -3,7 +3,6 @@ import 'package:ebazaar/consts/consts.dart';
 import 'package:ebazaar/services/firestore_services.dart';
 import 'package:ebazaar/views/chat_screen/chat_screen.dart';
 import 'package:ebazaar/widgets_common/loading_indicator.dart';
-import 'package:flutter/material.dart';
 
 class MessagesScreen extends StatelessWidget {
   const MessagesScreen({super.key});

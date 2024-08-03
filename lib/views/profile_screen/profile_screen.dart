@@ -12,7 +12,6 @@ import 'package:ebazaar/views/profile_screen/edit_profile_screen.dart';
 import 'package:ebazaar/views/wishlist_screen/wishlist_screen.dart';
 import 'package:ebazaar/widgets_common/bg_widgets.dart';
 import 'package:ebazaar/widgets_common/loading_indicator.dart';
-import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

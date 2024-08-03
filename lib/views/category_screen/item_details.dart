@@ -1,10 +1,10 @@
-import 'package:ebazaar/consts/colors.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:ebazaar/consts/consts.dart';
 import 'package:ebazaar/consts/lists.dart';
 import 'package:ebazaar/controllers/product_controller.dart';
 import 'package:ebazaar/views/chat_screen/chat_screen.dart';
 import 'package:ebazaar/widgets_common/our_button.dart';
-import 'package:flutter/material.dart';
 
 class ItemDetails extends StatelessWidget {
   final String? title;

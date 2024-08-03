@@ -8,7 +8,6 @@ import 'package:ebazaar/views/home_screen/components/featured_button.dart';
 import 'package:ebazaar/views/home_screen/search_screen.dart';
 import 'package:ebazaar/widgets_common/home_buttons.dart';
 import 'package:ebazaar/widgets_common/loading_indicator.dart';
-import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

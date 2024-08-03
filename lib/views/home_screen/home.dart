@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:ebazaar/consts/consts.dart';
 import 'package:ebazaar/controllers/home_controller.dart';
 import 'package:ebazaar/views/cart_screen/cart_screen.dart';
@@ -5,7 +7,6 @@ import 'package:ebazaar/views/category_screen/category_screen.dart';
 import 'package:ebazaar/views/home_screen/home_screen.dart';
 import 'package:ebazaar/views/profile_screen/profile_screen.dart';
 import 'package:ebazaar/widgets_common/exit_dialog.dart';
-import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});

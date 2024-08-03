@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ebazaar/consts/consts.dart';
 import 'package:ebazaar/services/firestore_services.dart';
 import 'package:ebazaar/widgets_common/loading_indicator.dart';
-import 'package:flutter/material.dart';
 
 class WishlistScreen extends StatelessWidget {
   const WishlistScreen({super.key});
