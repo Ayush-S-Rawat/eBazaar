@@ -1,11 +1,12 @@
 import 'package:ebazaar/views/splash_screen/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 import 'consts/consts.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-      options: FirebaseOptions(
+      options: const FirebaseOptions(
     apiKey: 'AIzaSyDQir46hhy1mTULt3YSaaV8o7kJZkNs5UE',
     appId: '1:329283842385:android:a8c8351c7ddef1f1c5e370',
     messagingSenderId: '329283842385',
@@ -16,7 +17,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,13 +26,13 @@ class MyApp extends StatelessWidget {
       title: appname,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.transparent,
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           iconTheme: IconThemeData(color: darkFontGrey),
           backgroundColor: Colors.transparent,
         ),
         fontFamily: regular,
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
