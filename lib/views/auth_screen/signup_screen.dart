@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:ebazaar/consts/consts.dart';
 import 'package:ebazaar/controllers/auth_controller.dart';
 import 'package:ebazaar/views/home_screen/home.dart';
@@ -79,7 +81,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       10.widthBox,
                       Expanded(
                         child: RichText(
-                          text: TextSpan(
+                          text: const TextSpan(
                             children: [
                               TextSpan(
                                 text: "I agree to the ",
@@ -117,7 +119,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ),
                   5.heightBox,
                   controller.isloading.value
-                      ? CircularProgressIndicator(
+                      ? const CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation(redColor),
                         )
                       : ourButton(
@@ -140,7 +142,7 @@ class _SignupScreenState extends State<SignupScreen> {
                                       name: nameController.text);
                                 }).then((value) {
                                   VxToast.show(context, msg: loggedIn);
-                                  Get.offAll(() => Home());
+                                  Get.offAll(() => const Home());
                                 });
                               } catch (e) {
                                 auth.signOut();
@@ -165,7 +167,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   .box
                   .white
                   .rounded
-                  .padding(EdgeInsets.all(16))
+                  .padding(const EdgeInsets.all(16))
                   .width(context.screenWidth - 70)
                   .shadowSm
                   .make(),

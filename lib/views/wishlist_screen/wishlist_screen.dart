@@ -32,7 +32,7 @@ class WishlistScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: ListView.builder(
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: data.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -53,7 +53,7 @@ class WishlistScreen extends StatelessWidget {
                             .color(redColor)
                             .fontFamily(semibold)
                             .make(),
-                        trailing: Icon(
+                        trailing: const Icon(
                           Icons.favorite,
                           color: redColor,
                         ).onTap(() async {

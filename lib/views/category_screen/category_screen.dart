@@ -1,8 +1,8 @@
+import 'package:ebazaar/consts/consts.dart';
 import 'package:ebazaar/consts/lists.dart';
 import 'package:ebazaar/controllers/product_controller.dart';
 import 'package:ebazaar/views/category_screen/category_details.dart';
 import 'package:ebazaar/widgets_common/bg_widgets.dart';
-import 'package:ebazaar/consts/consts.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
@@ -17,11 +17,11 @@ class CategoryScreen extends StatelessWidget {
         title: categories.text.fontFamily(bold).white.make(),
       ),
       body: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: GridView.builder(
             itemCount: 9,
             shrinkWrap: true,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
                 mainAxisSpacing: 8,
                 crossAxisSpacing: 8,

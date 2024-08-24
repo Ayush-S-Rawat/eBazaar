@@ -70,7 +70,7 @@ class ChatScreen extends StatelessWidget {
                 Expanded(
                     child: TextFormField(
                   controller: controller.msgController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(
                         borderSide: BorderSide(color: textfieldGrey)),
                     focusedBorder: OutlineInputBorder(
@@ -83,14 +83,14 @@ class ChatScreen extends StatelessWidget {
                       controller.sendMsg(controller.msgController.text);
                       controller.msgController.clear();
                     },
-                    icon: Icon(Icons.send),
+                    icon: const Icon(Icons.send),
                     color: redColor)
               ],
             )
                 .box
                 .height(80)
-                .padding(EdgeInsets.all(12))
-                .margin(EdgeInsets.only(bottom: 8))
+                .padding(const EdgeInsets.all(12))
+                .margin(const EdgeInsets.only(bottom: 8))
                 .make(),
           ],
         ),

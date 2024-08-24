@@ -28,10 +28,10 @@ class ItemDetails extends StatelessWidget {
                 controller.resetValues();
                 Get.back();
               },
-              icon: Icon(Icons.arrow_back)),
+              icon: const Icon(Icons.arrow_back)),
           title: title!.text.color(darkFontGrey).fontFamily(bold).make(),
           actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.share)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.share)),
             Obx(
               () => IconButton(
                 onPressed: () {
@@ -41,7 +41,7 @@ class ItemDetails extends StatelessWidget {
                     controller.addToWishlist(data.id, context);
                   }
                 },
-                icon: Icon(Icons.favorite_outlined),
+                icon: const Icon(Icons.favorite_outlined),
                 color: controller.isFav.value ? redColor : darkFontGrey,
               ),
             ),
@@ -51,7 +51,7 @@ class ItemDetails extends StatelessWidget {
           children: [
             Expanded(
                 child: Padding(
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               child: SingleChildScrollView(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,19 +112,19 @@ class ItemDetails extends StatelessWidget {
                                 .make(),
                           ],
                         )),
-                        CircleAvatar(
+                        const CircleAvatar(
                           backgroundColor: Colors.white,
                           child:
                               Icon(Icons.message_rounded, color: darkFontGrey),
                         ).onTap(() {
-                          Get.to(() => ChatScreen(),
+                          Get.to(() => const ChatScreen(),
                               arguments: [data['p_seller'], data['vendor_id']]);
                         })
                       ],
                     )
                         .box
                         .height(60)
-                        .padding(EdgeInsets.symmetric(horizontal: 16))
+                        .padding(const EdgeInsets.symmetric(horizontal: 16))
                         .color(textfieldGrey)
                         .make(),
                     20.heightBox,
@@ -155,8 +155,9 @@ class ItemDetails extends StatelessWidget {
                                                 .color(Color(
                                                         data['p_colors'][index])
                                                     .withOpacity(1.0))
-                                                .margin(EdgeInsets.symmetric(
-                                                    horizontal: 4))
+                                                .margin(
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 4))
                                                 .make()
                                                 .onTap(() {
                                               controller
@@ -178,7 +179,7 @@ class ItemDetails extends StatelessWidget {
                                         )),
                               ),
                             ],
-                          ).box.padding(EdgeInsets.all(8)).make(),
+                          ).box.padding(const EdgeInsets.all(8)).make(),
                           //quatity row
                           Row(
                             children: [
@@ -198,7 +199,7 @@ class ItemDetails extends StatelessWidget {
                                           controller.calculateTotalPrice(
                                               int.parse(data['p_price']));
                                         },
-                                        icon: Icon(Icons.remove)),
+                                        icon: const Icon(Icons.remove)),
                                     controller.quantity.value.text
                                         .size(16)
                                         .color(darkFontGrey)
@@ -211,7 +212,7 @@ class ItemDetails extends StatelessWidget {
                                           controller.calculateTotalPrice(
                                               int.parse(data['p_price']));
                                         },
-                                        icon: Icon(Icons.add)),
+                                        icon: const Icon(Icons.add)),
                                     10.widthBox,
                                     "(${data['p_quantity']} Available)"
                                         .text
@@ -221,7 +222,7 @@ class ItemDetails extends StatelessWidget {
                                 ),
                               ),
                             ],
-                          ).box.padding(EdgeInsets.all(8)).make(),
+                          ).box.padding(const EdgeInsets.all(8)).make(),
                           //total row
                           Row(
                             children: [
@@ -236,7 +237,7 @@ class ItemDetails extends StatelessWidget {
                                   .fontFamily(bold)
                                   .make(),
                             ],
-                          ).box.padding(EdgeInsets.all(8)).make(),
+                          ).box.padding(const EdgeInsets.all(8)).make(),
                         ],
                       ).box.white.shadowSm.make(),
                     ),
@@ -252,7 +253,7 @@ class ItemDetails extends StatelessWidget {
                     // buttons section
                     10.heightBox,
                     ListView(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       children: List.generate(
                         itemDetailButtonsList.length,
@@ -262,7 +263,7 @@ class ItemDetails extends StatelessWidget {
                               .fontFamily(semibold)
                               .color(darkFontGrey)
                               .make(),
-                          trailing: Icon(Icons.arrow_forward),
+                          trailing: const Icon(Icons.arrow_forward),
                         ),
                       ),
                     ),
@@ -302,10 +303,11 @@ class ItemDetails extends StatelessWidget {
                                   ],
                                 )
                                     .box
-                                    .margin(EdgeInsets.symmetric(horizontal: 4))
+                                    .margin(const EdgeInsets.symmetric(
+                                        horizontal: 4))
                                     .white
                                     .roundedSM
-                                    .padding(EdgeInsets.all(8))
+                                    .padding(const EdgeInsets.all(8))
                                     .make()),
                       ),
                     )

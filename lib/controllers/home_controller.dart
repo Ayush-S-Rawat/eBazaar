@@ -26,6 +26,7 @@ class HomeController extends GetxController {
 
     username = n;
 
+    // ignore: avoid_print
     print(username);
   }
 }

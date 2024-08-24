@@ -28,8 +28,9 @@ class PaymentMethods extends StatelessWidget {
                             paymentMethods[controller.paymentIndex.value],
                         totalAmount: controller.totalP.value);
                     await controller.clearCart();
+                    // ignore: use_build_context_synchronously
                     VxToast.show(context, msg: "Order Placed Successfully");
-                    Get.offAll(Home());
+                    Get.offAll(const Home());
                   },
                   color: redColor,
                   textColor: whiteColor,
@@ -67,7 +68,7 @@ class PaymentMethods extends StatelessWidget {
                         fit: BoxFit.cover,
                       )
                           .box
-                          .margin(EdgeInsets.only(bottom: 8))
+                          .margin(const EdgeInsets.only(bottom: 8))
                           .roundedSM
                           .border(
                               color: redColor,
@@ -91,7 +92,7 @@ class PaymentMethods extends StatelessWidget {
                       Positioned(
                           right: 10,
                           bottom: 10,
-                          child: "${paymentMethods[index]}"
+                          child: paymentMethods[index]
                               .text
                               .white
                               .size(16)

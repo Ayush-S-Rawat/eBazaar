@@ -25,7 +25,7 @@ class ProfileScreen extends StatelessWidget {
         stream: FirestoreServices.getUser(currentUser!.uid),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
-            return Center(
+            return const Center(
                 child: CircularProgressIndicator(
                     valueColor: AlwaysStoppedAnimation(redColor)));
           } else {
@@ -35,7 +35,7 @@ class ProfileScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: Align(
+                    child: const Align(
                       alignment: Alignment.topRight,
                       child: Icon(
                         Icons.edit,
@@ -76,11 +76,11 @@ class ProfileScreen extends StatelessWidget {
                         )),
                         OutlinedButton(
                             style: OutlinedButton.styleFrom(
-                                side: BorderSide(color: whiteColor)),
+                                side: const BorderSide(color: whiteColor)),
                             onPressed: () async {
                               await Get.put(AuthController())
                                   .signoutMethod(context);
-                              Get.offAll(() => LoginScreen());
+                              Get.offAll(() => const LoginScreen());
                             },
                             child:
                                 logout.text.fontFamily(semibold).white.make())
@@ -135,7 +135,7 @@ class ProfileScreen extends StatelessWidget {
                   ListView.separated(
                     shrinkWrap: true,
                     separatorBuilder: (context, index) {
-                      return Divider(
+                      return const Divider(
                         color: lightGrey,
                       );
                     },
@@ -145,13 +145,13 @@ class ProfileScreen extends StatelessWidget {
                         onTap: () {
                           switch (index) {
                             case 0:
-                              Get.to(() => OrdersScreen());
+                              Get.to(() => const OrdersScreen());
                               break;
                             case 1:
-                              Get.to(() => WishlistScreen());
+                              Get.to(() => const WishlistScreen());
                               break;
                             case 2:
-                              Get.to(() => MessagesScreen());
+                              Get.to(() => const MessagesScreen());
                               break;
                           }
                         },
@@ -168,8 +168,8 @@ class ProfileScreen extends StatelessWidget {
                       .box
                       .white
                       .rounded
-                      .margin(EdgeInsets.all(12))
-                      .padding(EdgeInsets.symmetric(horizontal: 16))
+                      .margin(const EdgeInsets.all(12))
+                      .padding(const EdgeInsets.symmetric(horizontal: 16))
                       .shadowSm
                       .make()
                       .box

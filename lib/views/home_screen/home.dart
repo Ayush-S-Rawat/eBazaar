@@ -47,10 +47,10 @@ class Home extends StatelessWidget {
     ];
 
     var navbody = [
-      HomeScreen(),
-      CategoryScreen(),
-      CartScreen(),
-      ProfileScreen(),
+      const HomeScreen(),
+      const CategoryScreen(),
+      const CartScreen(),
+      const ProfileScreen(),
     ];
 
     return WillPopScope(
@@ -77,7 +77,7 @@ class Home extends StatelessWidget {
             backgroundColor: whiteColor,
             type: BottomNavigationBarType.fixed,
             selectedItemColor: redColor,
-            selectedLabelStyle: TextStyle(fontFamily: semibold),
+            selectedLabelStyle: const TextStyle(fontFamily: semibold),
             items: navbaritem,
             onTap: (value) {
               controller.currentNavIndex.value = value;

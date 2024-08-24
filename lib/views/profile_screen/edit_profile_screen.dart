@@ -51,7 +51,7 @@ class EditProfileScreen extends StatelessWidget {
                 },
                 textColor: whiteColor,
                 title: "Change"),
-            Divider(),
+            const Divider(),
             20.heightBox,
             customTextField(
                 hint: nameHint,
@@ -72,7 +72,7 @@ class EditProfileScreen extends StatelessWidget {
                 controller: controller.newpassController),
             20.heightBox,
             controller.isloading.value
-                ? CircularProgressIndicator(
+                ? const CircularProgressIndicator(
                     valueColor: AlwaysStoppedAnimation(redColor))
                 : SizedBox(
                     width: context.screenWidth - 60,
@@ -96,8 +96,10 @@ class EditProfileScreen extends StatelessWidget {
                                 imgURL: controller.profileImageLink,
                                 name: controller.nameController.text,
                                 password: controller.newpassController.text);
+                            // ignore: use_build_context_synchronously
                             VxToast.show(context, msg: "Updated");
                           } else {
+                            // ignore: use_build_context_synchronously
                             VxToast.show(context, msg: "Wrong Old Password");
                             controller.isloading(false);
                           }
@@ -110,9 +112,9 @@ class EditProfileScreen extends StatelessWidget {
             .box
             .shadowSm
             .white
-            .padding(EdgeInsets.all(16))
+            .padding(const EdgeInsets.all(16))
             .rounded
-            .margin(EdgeInsets.only(top: 50, left: 12, right: 12))
+            .margin(const EdgeInsets.only(top: 50, left: 12, right: 12))
             .make(),
       ),
     ));

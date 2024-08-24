@@ -11,17 +11,19 @@ Widget senderBubble(DocumentSnapshot data) {
   return Directionality(
     textDirection: isSenderTheUser ? TextDirection.rtl : TextDirection.ltr,
     child: Container(
-      padding: EdgeInsets.all(12),
-      margin: EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.all(12),
+      margin: const EdgeInsets.only(bottom: 8),
       decoration: BoxDecoration(
           color: isSenderTheUser ? redColor : darkFontGrey,
           borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20),
-              topRight: Radius.circular(20),
-              bottomLeft:
-                  isSenderTheUser ? Radius.circular(20) : Radius.circular(0),
-              bottomRight:
-                  isSenderTheUser ? Radius.circular(0) : Radius.circular(20))),
+              topLeft: const Radius.circular(20),
+              topRight: const Radius.circular(20),
+              bottomLeft: isSenderTheUser
+                  ? const Radius.circular(20)
+                  : const Radius.circular(0),
+              bottomRight: isSenderTheUser
+                  ? const Radius.circular(0)
+                  : const Radius.circular(20))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

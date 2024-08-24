@@ -52,7 +52,7 @@ class OrdersScreen extends StatelessWidget {
                       onPressed: () {
                         Get.to(() => OrdersDetails(data: data[index]));
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: darkFontGrey,
                       )),

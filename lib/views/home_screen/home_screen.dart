@@ -17,7 +17,7 @@ class HomeScreen extends StatelessWidget {
     var controller = Get.put(HomeController());
 
     return Container(
-      padding: EdgeInsets.all(12),
+      padding: const EdgeInsets.all(12),
       color: lightGrey,
       width: context.screenWidth,
       height: context.screenHeight,
@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                 controller: controller.searchController,
                 decoration: InputDecoration(
                     border: InputBorder.none,
-                    suffixIcon: Icon(Icons.search).onTap(() {
+                    suffixIcon: const Icon(Icons.search).onTap(() {
                       if (controller
                           .searchController.text.isNotEmptyAndNotNull) {
                         Get.to(() => SearchScreen(
@@ -43,13 +43,13 @@ class HomeScreen extends StatelessWidget {
                     filled: true,
                     fillColor: whiteColor,
                     hintText: searchanything,
-                    hintStyle: TextStyle(color: textfieldGrey)),
+                    hintStyle: const TextStyle(color: textfieldGrey)),
               ),
             ),
             10.heightBox,
             Expanded(
               child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
                     VxSwiper.builder(
@@ -67,7 +67,8 @@ class HomeScreen extends StatelessWidget {
                                 .box
                                 .rounded
                                 .clip(Clip.antiAlias)
-                                .margin(EdgeInsets.symmetric(horizontal: 8))
+                                .margin(
+                                    const EdgeInsets.symmetric(horizontal: 8))
                                 .make(),
                           );
                         }),
@@ -99,7 +100,8 @@ class HomeScreen extends StatelessWidget {
                                 .box
                                 .rounded
                                 .clip(Clip.antiAlias)
-                                .margin(EdgeInsets.symmetric(horizontal: 8))
+                                .margin(
+                                    const EdgeInsets.symmetric(horizontal: 8))
                                 .make(),
                           );
                         }),
@@ -153,9 +155,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                     20.heightBox,
                     Container(
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       width: double.infinity,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: redColor,
                       ),
                       child: Column(
@@ -212,11 +214,11 @@ class HomeScreen extends StatelessWidget {
                                         ],
                                       )
                                           .box
-                                          .margin(EdgeInsets.symmetric(
+                                          .margin(const EdgeInsets.symmetric(
                                               horizontal: 4))
                                           .white
                                           .roundedSM
-                                          .padding(EdgeInsets.all(8))
+                                          .padding(const EdgeInsets.all(8))
                                           .make()
                                           .onTap(() {
                                         Get.to(() => ItemDetails(
@@ -249,7 +251,8 @@ class HomeScreen extends StatelessWidget {
                                 .box
                                 .rounded
                                 .clip(Clip.antiAlias)
-                                .margin(EdgeInsets.symmetric(horizontal: 8))
+                                .margin(
+                                    const EdgeInsets.symmetric(horizontal: 8))
                                 .make(),
                           );
                         }),
@@ -272,11 +275,11 @@ class HomeScreen extends StatelessWidget {
                         } else {
                           var allproductsdata = snapshot.data!.docs;
                           return GridView.builder(
-                              physics: NeverScrollableScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               shrinkWrap: true,
                               itemCount: allproductsdata.length,
                               gridDelegate:
-                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
                                       crossAxisCount: 2,
                                       mainAxisSpacing: 8,
                                       crossAxisSpacing: 8,
@@ -291,7 +294,7 @@ class HomeScreen extends StatelessWidget {
                                       width: 200,
                                       fit: BoxFit.cover,
                                     ),
-                                    Spacer(),
+                                    const Spacer(),
                                     "${allproductsdata[index]['p_name']}"
                                         .text
                                         .fontFamily(semibold)
@@ -307,10 +310,11 @@ class HomeScreen extends StatelessWidget {
                                   ],
                                 )
                                     .box
-                                    .margin(EdgeInsets.symmetric(horizontal: 4))
+                                    .margin(const EdgeInsets.symmetric(
+                                        horizontal: 4))
                                     .white
                                     .roundedSM
-                                    .padding(EdgeInsets.all(12))
+                                    .padding(const EdgeInsets.all(12))
                                     .make()
                                     .onTap(() {
                                   Get.to(() => ItemDetails(

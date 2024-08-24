@@ -10,7 +10,7 @@ Widget customTextField({String? title, String? hint, controller, isPass}) {
         obscureText: isPass,
         controller: controller,
         decoration: InputDecoration(
-          hintStyle: TextStyle(
+          hintStyle: const TextStyle(
             fontFamily: semibold,
             color: textfieldGrey,
           ),
@@ -19,7 +19,7 @@ Widget customTextField({String? title, String? hint, controller, isPass}) {
           fillColor: lightGrey,
           filled: true,
           border: InputBorder.none,
-          focusedBorder: OutlineInputBorder(
+          focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(
               color: redColor,
             ),

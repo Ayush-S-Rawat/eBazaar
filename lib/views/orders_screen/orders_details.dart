@@ -1,6 +1,6 @@
+import 'package:ebazaar/consts/consts.dart';
 import 'package:ebazaar/views/orders_screen/components/order_place_details.dart';
 import 'package:ebazaar/views/orders_screen/components/order_status.dart';
-import 'package:ebazaar/consts/consts.dart';
 import 'package:intl/intl.dart' as intl;
 
 class OrdersDetails extends StatelessWidget {
@@ -21,7 +21,7 @@ class OrdersDetails extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           child: Column(
             children: [
               orderStatus(
@@ -44,7 +44,7 @@ class OrdersDetails extends StatelessWidget {
                   icon: Icons.done_all_rounded,
                   showDone: data['order_delivered'],
                   title: "Delivered"),
-              Divider(),
+              const Divider(),
               10.heightBox,
               Column(
                 children: [
@@ -107,7 +107,7 @@ class OrdersDetails extends StatelessWidget {
                   )
                 ],
               ).box.white.shadow.make(),
-              Divider(),
+              const Divider(),
               10.heightBox,
               "Ordered_Products"
                   .text
@@ -117,7 +117,7 @@ class OrdersDetails extends StatelessWidget {
                   .makeCentered(),
               10.heightBox,
               ListView(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 children: List.generate(data['orders'].length, (index) {
                   return Column(
@@ -129,16 +129,21 @@ class OrdersDetails extends StatelessWidget {
                           d1: "${data['orders'][index]['qty']} x",
                           d2: "Refundable"),
                       Container(
-                        margin: EdgeInsets.only(left: 16),
+                        margin: const EdgeInsets.only(left: 16),
                         height: 20,
                         width: 30,
                         color: Color(int.parse(data['orders'][index]['color'])),
                       ),
-                      Divider()
+                      const Divider()
                     ],
                   );
                 }).toList(),
-              ).box.white.shadow.margin(EdgeInsets.only(bottom: 4)).make(),
+              )
+                  .box
+                  .white
+                  .shadow
+                  .margin(const EdgeInsets.only(bottom: 4))
+                  .make(),
               20.heightBox,
             ],
           ),

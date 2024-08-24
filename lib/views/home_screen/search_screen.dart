@@ -33,7 +33,7 @@ class SearchScreen extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.all(8.0),
               child: GridView(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 8,
                     crossAxisSpacing: 8,
@@ -48,7 +48,7 @@ class SearchScreen extends StatelessWidget {
                               width: 200,
                               fit: BoxFit.cover,
                             ),
-                            Spacer(),
+                            const Spacer(),
                             "${filtered[index]['p_name']}"
                                 .text
                                 .fontFamily(semibold)
@@ -64,11 +64,11 @@ class SearchScreen extends StatelessWidget {
                           ],
                         )
                             .box
-                            .margin(EdgeInsets.symmetric(horizontal: 4))
+                            .margin(const EdgeInsets.symmetric(horizontal: 4))
                             .white
                             .shadowSm
                             .roundedSM
-                            .padding(EdgeInsets.all(12))
+                            .padding(const EdgeInsets.all(12))
                             .make()
                             .onTap(() {
                           Get.to(ItemDetails(

@@ -19,7 +19,7 @@ class CartScreen extends StatelessWidget {
           child: ourButton(
               color: redColor,
               onPress: () {
-                Get.to(() => ShippingDetails());
+                Get.to(() => const ShippingDetails());
               },
               textColor: whiteColor,
               title: 'Proceed to shipping'),
@@ -51,7 +51,7 @@ class CartScreen extends StatelessWidget {
                 controller.productSnapshot = data;
 
                 return Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
                       Expanded(
@@ -76,7 +76,7 @@ class CartScreen extends StatelessWidget {
                                     .color(redColor)
                                     .fontFamily(semibold)
                                     .make(),
-                                trailing: Icon(
+                                trailing: const Icon(
                                   Icons.delete,
                                   color: redColor,
                                 ).onTap(() {
@@ -105,7 +105,7 @@ class CartScreen extends StatelessWidget {
                         ],
                       )
                           .box
-                          .padding(EdgeInsets.all(12))
+                          .padding(const EdgeInsets.all(12))
                           .width(context.screenWidth - 60)
                           .color(lightGolden)
                           .roundedSM

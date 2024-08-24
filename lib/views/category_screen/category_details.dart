@@ -45,7 +45,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             child: Row(
               children: List.generate(
@@ -60,7 +60,7 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                     .white
                     .rounded
                     .size(120, 60)
-                    .margin(EdgeInsets.symmetric(horizontal: 4))
+                    .margin(const EdgeInsets.symmetric(horizontal: 4))
                     .make()
                     .onTap(() {
                   switchCategory("${controller.subcat[index]}");
@@ -92,14 +92,15 @@ class _CategoryDetailsState extends State<CategoryDetails> {
 
                   return Expanded(
                     child: GridView.builder(
-                        physics: BouncingScrollPhysics(),
+                        physics: const BouncingScrollPhysics(),
                         shrinkWrap: true,
                         itemCount: data.length,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            mainAxisExtent: 250,
-                            mainAxisSpacing: 8,
-                            crossAxisSpacing: 8),
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisExtent: 250,
+                                mainAxisSpacing: 8,
+                                crossAxisSpacing: 8),
                         itemBuilder: (context, index) {
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -126,11 +127,11 @@ class _CategoryDetailsState extends State<CategoryDetails> {
                             ],
                           )
                               .box
-                              .margin(EdgeInsets.symmetric(horizontal: 4))
+                              .margin(const EdgeInsets.symmetric(horizontal: 4))
                               .white
                               .roundedSM
                               .outerShadowSm
-                              .padding(EdgeInsets.all(12))
+                              .padding(const EdgeInsets.all(12))
                               .make()
                               .onTap(() {
                             controller.checkIffav(data[index]);

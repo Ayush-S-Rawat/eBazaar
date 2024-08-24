@@ -28,7 +28,7 @@ class ShippingDetails extends StatelessWidget {
                   controller.stateController.text.isNotEmpty &&
                   controller.postalcodeController.text.length == 6 &&
                   controller.phoneController.text.length == 10) {
-                Get.to(() => PaymentMethods());
+                Get.to(() => const PaymentMethods());
               } else {
                 VxToast.show(context, msg: "Please fill the form");
               }
